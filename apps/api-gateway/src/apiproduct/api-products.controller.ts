@@ -11,7 +11,7 @@ export class ApiProductsController {
   @Get(':id')
   getProductById(@Param('id') id: string) {
     console.log('API Gateway: Get Product by ID:', id);
-    // 'get_product_by_id' pattern ဖြင့် message ပို့ပါ
+
     return this.productServiceClient.send('get_product_by_id', {
       productId: id,
     });
